@@ -1,0 +1,20 @@
+[project]
+name = "diabetes-predection"
+version = "0.1.0"
+description = "Machine learning pipeline for diabetes prediction using Random Forest with data preprocessing, model evaluation, and visualization."
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "imblearn>=0.0",
+    "matplotlib>=3.9.4",
+    "nbformat>=4.2.0",
+    "numpy>=2.0.2",
+    "pandas>=2.2.3",
+    "plotly>=5.24.1",
+    "scikit-learn>=1.6.0",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=6.29.5",
+]

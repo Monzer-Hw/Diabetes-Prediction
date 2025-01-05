@@ -39,17 +39,31 @@ The model's performance is evaluated using metrics such as:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Monzer-Hw/Diabetes-Prediction.git
+   git clone https://github.com/Monzer-Hw/Diabetes-Prediction
    ```
+2. Install `uv` on your machine
+   
+   For macOS and linux:
+   ````bash
+   curl -LsSf https://astral.sh/uv/install.sh | sh
+   ````
+   For windows:
+   ````bash
+   powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+   ````
+3. Run the following commands:
+   
+   To create a virtual environment with the required libraries:
+   ````bash
+   uv sync
+   ````
 
-2. Install the required libraries:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. Open the Jupyter Notebook:
-   ```bash
-   jupyter notebook notebook.ipynb
-   ```
-
-4. Run the cells in the notebook to preprocess the data, train the model, and evaluate its performance.
+   To create a kernel for the jupyter notebook:
+   ````bash
+   uv run ipython kernel install --user --name=diabetes-prediction
+   ````
+4. Run the jupyter notebook with this command:
+   ````bash
+   uv run --with jupyter jupyter lab
+   ````
+   Or just select the virtual environment and run the notebook if you have VS Code with jupyter extention.
